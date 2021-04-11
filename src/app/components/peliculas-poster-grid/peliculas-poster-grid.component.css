@@ -5,7 +5,7 @@ h3{
 }
 .poster{
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.8);
     margin: 5px;
     max-height: 350px;
     padding: 0;

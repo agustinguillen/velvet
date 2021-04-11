@@ -16,13 +16,23 @@ hr{
 }
 
 .navbar-brand {
-    font-weight: 200;
+    font-weight: bold;
     color: #bd4c5f !important;
 }
 
+.btn-success {
+    border-color: #bd4c5f !important;
+    background-color: #bd4c5f ;
+}
+
+.btn-success:hover {
+    border-color: #bd4c5f !important;
+    background-color: #bd1833;
+}
+
 .btn-outline-success {
-    border-color: #bd4c5f !important;;
-    color: #bd4c5f !important;;
+    border-color: #bd4c5f !important;
+    color: #bd4c5f !important;
 }
 
 .btn-outline-success:hover {

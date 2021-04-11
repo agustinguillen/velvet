@@ -1,6 +1,7 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Movie } from 'src/app/interfaces/cartelera-response';
-import { PeliculasService } from './../../services/peliculas.service'
+import { PeliculasService } from './../../services/peliculas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public movies: Movie[] = [];
   public moviesSlideshow: Movie[] = [];
+  
 
   @HostListener('window:scroll', ['$event']) 
   onScroll(){
@@ -28,7 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  constructor( private peliculasService: PeliculasService ) { }
+  constructor( private peliculasService: PeliculasService) { }
 
   ngOnInit(): void {
 
@@ -43,5 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(){
       this.peliculasService.resetCartelera();
   }
+
+  
 
 }

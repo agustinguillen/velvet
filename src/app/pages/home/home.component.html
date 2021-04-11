@@ -1,3 +1,4 @@
+
 <h1>Cartelera</h1>
 <div class="row" *ngIf="movies.length>0">
     <div class="col">
@@ -8,7 +9,8 @@
 <h1 class="mt-5">Películas</h1>
 <app-peliculas-poster-grid 
     *ngIf="movies.length > 0" 
-    [movies]="movies">
+    [movies]="movies"
+    >
 </app-peliculas-poster-grid>
 
 
