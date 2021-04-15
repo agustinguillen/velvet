@@ -24,9 +24,7 @@ h3{
 }
 
 
-
-
-@media (max-width: 768px){
+/*@media (max-width: 768px){
     #estrellas{
         margin-left: 0;
         margin-right: 0;
@@ -39,9 +37,9 @@ h3{
         padding: 0;
         width: fit-content;
     }
-}
+}*/
 
-@media (max-width: 400px){
+@media (max-width: 600px){
     #estrellas{
         margin-left: 15vw;
         margin-right: 8vw;

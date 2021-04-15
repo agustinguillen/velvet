@@ -56,7 +56,7 @@ iframe{
     
 }
 
-@media (max-width:400px){
+@media (max-width:500px){
     .cuerpo-pelicula{
         margin: 0px 5vw 5vh 5vw;
     }

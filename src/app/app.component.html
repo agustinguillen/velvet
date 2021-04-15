@@ -2,5 +2,5 @@
 <app-navbar class="navbar-fixed"></app-navbar>
 
 <div class="cuerpo">
-  <router-outlet></router-outlet>
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>

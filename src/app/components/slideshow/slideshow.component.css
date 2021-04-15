@@ -53,11 +53,11 @@
     } 
 
     .ver-mas{
-        margin: 7px 40vw 7px 40vw;
+        margin: 7px 37vw 7px 37vw;
     }  
 }
 
-@media (max-width:768px) {
+@media (max-width:500px) {
     .ver-mas{
         margin: 7px 30vw 7px 30vw;
     }  
