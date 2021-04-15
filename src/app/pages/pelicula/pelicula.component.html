@@ -1,82 +1,84 @@
-<div class="row animate__animated animate__fadeIn animate__faster mt-5" *ngIf="pelicula">
-    <div class="col-md-6">
-        <img 
-        [src]="pelicula.poster_path | poster" 
-        [alt]="pelicula.title"
-        class="poster-pelicula">
-    </div>
-    <div class="col-md-6">
-        <h3>{{ pelicula.title }}</h3>
-        <div class="row">
-            <div class="col">
-                <star-rating [value]="pelicula.vote_average"
-                                    totalstars="10"
-                                    checkedcolor="yellow"
-                                    uncheckedcolor="grey"
-                                    size="15px"
-                                    readonly="false">
-                </star-rating>
-            </div>
-            <div class="col text-white">
-                {{pelicula.vote_average | number:'1.1'}}
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col text-white">
-                {{pelicula.overview}}
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col text-white">
-                <p><strong>Género: </strong></p>
-                <p *ngFor="let genero of genre"> {{genero.name}} | </p>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col text-white">
-                <p><strong>Año: </strong></p>
-                <p> {{pelicula.release_date | date:'yyyy'}}  </p>
-            </div>
-        </div>
-        
-        <div class="row mt-5" *ngIf="trailer.length > 0">
-            <div class="col">
-                <iframe width="560" height="315" 
-                [src]="trailerURL | safe"
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-outline-info mt-5"
-                        (click)="regresar()">
-                    Volver
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row mt-5" *ngIf="cast.length > 0">
-    <div class="col">
-        <h4 class="text-white mb-3">Reparto</h4>
-        <app-cast-slideshow [cast]="cast"></app-cast-slideshow>
-    </div>
-</div>
-
-<div class="row mt-5" *ngIf="recomendadas.length > 0">
-    <h4 class="text-white mb-3">Recomendadas</h4>
-    <div class="col-md-3 mb-5 d-flex animate__animated animate__fadeIn">
-        
-        <div *ngFor="let recomendada of recomendadas" >
+<div class="container cuerpo-pelicula">
+    <div class="row animate__animated animate__fadeIn animate__faster" *ngIf="pelicula">
+        <div class="col-md-6 d-flex">
             <img 
-            [src]="recomendada.poster_path | poster" 
-            [alt]="recomendada.title"
-            class="poster-recomendada"
-            (click)="onClickPelicula( recomendada )">
+            [src]="pelicula.poster_path | poster" 
+            [alt]="pelicula.title"
+            class="poster-pelicula">
         </div>
-        
+        <div class="col-md-6">
+            <h3>{{ pelicula.title }}</h3>
+            <div class="row">
+                <div class="col">
+                    <star-rating [value]="pelicula.vote_average"
+                                        totalstars="10"
+                                        checkedcolor="yellow"
+                                        uncheckedcolor="grey"
+                                        size="15px"
+                                        readonly="false">
+                    </star-rating>
+                </div>
+                <div class="col text-white">
+                    {{pelicula.vote_average | number:'1.1'}}
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-white">
+                    {{pelicula.overview}}
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-white">
+                    <p><strong>Género: </strong></p>
+                    <p *ngFor="let genero of genre"> {{genero.name}} | </p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-white">
+                    <p><strong>Año: </strong></p>
+                    <p> {{pelicula.release_date | date:'yyyy'}}  </p>
+                </div>
+            </div>
+            
+            <div class="row mt-5" *ngIf="trailer.length > 0">
+                <div class="col">
+                    <iframe  
+                    [src]="trailerURL | safe"
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-sm btn-outline-info mt-5"
+                            (click)="regresar()">
+                        Volver
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="cast.length > 0">
+        <div class="col">
+            <h4 class="text-white mb-3">Reparto</h4>
+            <app-cast-slideshow [cast]="cast"></app-cast-slideshow>
+        </div>
+    </div>
+
+    <div class="row mt-5 contenedor-recomendadas p-2" id="recomendadas" *ngIf="recomendadas.length > 0">
+        <h4 class="text-white mb-3">Recomendadas</h4>
+        <div class="col-md-3 mb-5 d-flex animate__animated animate__fadeIn">
+            
+            <div *ngFor="let recomendada of recomendadas" class="pelicula-recomendada">
+                <img 
+                [src]="recomendada.poster_path | poster" 
+                [alt]="recomendada.title"
+                class="poster-recomendada"
+                (click)="onClickPelicula( recomendada )">
+            </div>
+            
+        </div>
     </div>
 </div>

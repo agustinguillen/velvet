@@ -1,15 +1,15 @@
 <!-- Slider main container -->
-<div class="swiper-container">
+<div class="swiper-container main-swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div *ngFor="let movie of movies" 
             [ngStyle]="{
                 'background-size': 'cover',
-                'background-image': 'url(https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')'
+                'background-image': 'url(https://image.tmdb.org/t/p/original' + movie.backdrop_path + ')'
             }
             "
-            class="swiper-slide">
+            class="swiper-slide main-swiper-slide animate__animated animate__fadeIn">
           <div  class="movie-description">
               <h3>{{movie.title}}</h3>
                 <p>

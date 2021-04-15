@@ -13,3 +13,18 @@ h3{
 }
 
 
+@media (max-width: 768px){
+    #estrellas{
+        margin-left: 15vw;
+        margin-right: 10vw;
+        padding: 0;
+        width: 50vw;
+    }
+    .rating{
+        margin-right: 15vw;
+        padding: 0;
+        width: fit-content;
+    }
+}
+
+

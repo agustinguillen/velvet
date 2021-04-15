@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import Swiper from 'swiper';
+import {Swiper, Autoplay, Pagination} from 'swiper';
 import { Movie } from '../../interfaces/cartelera-response';
+Swiper.use([Autoplay]);
+Swiper.use([Pagination]);
 
 @Component({
   selector: 'app-slideshow',
@@ -18,7 +20,13 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
   ngAfterViewInit():void{
     this.swiper = new Swiper('.swiper-container', {
       // Optional parameters
-      loop: true
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
     
     });
   }

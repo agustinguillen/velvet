@@ -1,3 +1,7 @@
+.cuerpo-pelicula{
+    margin: 0px 9vw 5vh 9vw;
+}
+
 p{
     display: inline;
 }
@@ -13,3 +17,31 @@ p{
     cursor: pointer;
 }
 
+.contenedor-recomendadas{
+    max-width: 90vw;
+}
+
+iframe{
+    width: 100%;
+    height: 40vh;
+}
+
+@media (max-width:768px){
+    .pelicula-recomendada{
+        width: 70vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        overflow: hidden;
+    }
+    .poster-pelicula{
+        align-self: center;
+        width: 87vw;
+        margin-bottom: 5vh;
+    }
+
+    #recomendadas{
+        display: none;
+        width: 100vw;
+    }
+    
+}

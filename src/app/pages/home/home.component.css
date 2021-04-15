@@ -1,0 +1,9 @@
+.cuerpo-grid-peliculas{
+    margin: 0px 5vw 5vh 5vw;
+}
+
+@media (max-width: 768px){
+    .cuerpo-grid-peliculas{
+        margin: 0px 1vw 0px 1vw;
+    }
+}
