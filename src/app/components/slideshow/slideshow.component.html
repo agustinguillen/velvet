@@ -15,13 +15,14 @@
                 <p>
                   {{movie.overview | slice:0:350}}...
                 </p>
+                <a class="btn btn-sm btn-success ver-mas" 
+                type="button"
+                (click)="onClickPelicula( movie )">Ver más</a>
           </div>
       </div>
       
       ...
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
   
     <!-- If we need navigation buttons -->
     <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
@@ -29,4 +30,5 @@
   
     <!-- If we need scrollbar -->
     <div class="swiper-scrollbar"></div>
+
   </div>

@@ -2,6 +2,19 @@
     margin: 0px 5vw 5vh 5vw;
 }
 
+ul{
+    list-style-type:none
+}
+
+a{
+    text-decoration: none;
+    color: #bd4c5f
+}
+
+a:hover{
+    color: yellow
+}
+
 @media (max-width: 768px){
     .cuerpo-grid-peliculas{
         margin: 0px 1vw 0px 1vw;

@@ -21,4 +21,6 @@ export class PeliculasPosterGridComponent implements OnInit {
       this.router.navigate(['/pelicula/', movie.id])
   }
 
+ 
+
 }

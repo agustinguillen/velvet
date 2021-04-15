@@ -1,0 +1,23 @@
+.img-actor{
+    width: 150px;
+}
+
+@media (max-width: 768px){
+    .img-actor{
+        width: 130px;
+    }
+
+    .swiper-slide{
+        margin: 50px;
+    }
+}
+
+@media (max-width: 400px){
+    .img-actor{
+        width: 100px;
+    }
+
+    .swiper-slide{
+        margin: 50px;
+    }
+}

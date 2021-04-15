@@ -25,11 +25,11 @@
 }
 
 .swiper-button-prev{
-    color:rgb(199, 199, 199, 0.8);
+    color:rgb(199, 199, 199, 0.5);
 } 
 
 .swiper-button-next{
-    color:rgb(199, 199, 199, 0.8);
+    color:rgb(199, 199, 199, 0.5);
     padding-right: 15px;
 } 
 
@@ -43,9 +43,23 @@
     min-height: 150px;
 }
 
+.ver-mas{
+    margin: 7px 45vw 7px 45vw;
+}
+
 @media (max-width:768px) {
     .swiper-button-next{
         padding-right: 0;
-    }   
+    } 
+
+    .ver-mas{
+        margin: 7px 40vw 7px 40vw;
+    }  
+}
+
+@media (max-width:768px) {
+    .ver-mas{
+        margin: 7px 30vw 7px 30vw;
+    }  
 }
     

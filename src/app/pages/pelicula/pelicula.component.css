@@ -2,6 +2,12 @@
     margin: 0px 9vw 5vh 9vw;
 }
 
+@media (min-width: 1400px){
+    .cuerpo-pelicula{
+        margin: 0px 5vw 5vh 5vw;
+    }
+}
+
 p{
     display: inline;
 }
@@ -15,6 +21,10 @@ p{
     max-height: 150px;
     margin-right: 50px;
     cursor: pointer;
+}
+
+.info-pelicula{
+    max-width: 800px;
 }
 
 .contenedor-recomendadas{
@@ -40,8 +50,19 @@ iframe{
     }
 
     #recomendadas{
-        display: none;
+        display: block;
         width: 100vw;
     }
     
+}
+
+@media (max-width:400px){
+    .cuerpo-pelicula{
+        margin: 0px 5vw 5vh 5vw;
+    }
+
+    iframe{
+        width: 90vw;
+        height: 40vh;
+    }
 }

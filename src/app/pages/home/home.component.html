@@ -4,13 +4,13 @@
         <app-slideshow [movies]="movies"></app-slideshow>
     </div>
 </div>
-<div class="cuerpo-grid-peliculas">
-    
+<div class="col cuerpo-grid-peliculas">
     <app-peliculas-poster-grid 
         *ngIf="movies.length > 0" 
         [movies]="movies"
         >
     </app-peliculas-poster-grid>
+
 </div>
 
 

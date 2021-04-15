@@ -80,4 +80,9 @@
         margin: 20px 0 20px 10px;
         transform: translate(210px, 0);
     }
+    #search-input{
+        margin: 10px 20px 10px auto;   
+    }
  }
+
+ 

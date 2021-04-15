@@ -1,3 +1,10 @@
+@media (min-width: 1400px){
+    .grid-container{
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+}
+
 h3{
     color: white;
     font-size: 15px;
@@ -12,19 +19,41 @@ h3{
     cursor: pointer;
 }
 
+.titulo-rating-pelicula{
+    padding: 10px;
+}
+
+
+
 
 @media (max-width: 768px){
     #estrellas{
-        margin-left: 15vw;
-        margin-right: 10vw;
+        margin-left: 0;
+        margin-right: 0;
         padding: 0;
         width: 50vw;
     }
+
     .rating{
-        margin-right: 15vw;
+        margin-right: 5vw;
         padding: 0;
         width: fit-content;
     }
 }
+
+@media (max-width: 400px){
+    #estrellas{
+        margin-left: 15vw;
+        margin-right: 8vw;
+        padding: 0;
+        width: 50vw;
+    }
+    .rating{
+        margin-right: 5vw;
+        padding: 0;
+        width: fit-content;
+    }
+}
+
 
 
