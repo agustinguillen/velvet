@@ -118,6 +118,6 @@ export class PeliculasService {
             catchError(err => of([]))
             
             )};
-
+      
   
 }

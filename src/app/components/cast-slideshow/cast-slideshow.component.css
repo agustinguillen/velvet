@@ -4,20 +4,31 @@
 
 @media (max-width: 768px){
     .img-actor{
-        width: 130px;
+        width: 100px;
+    }
+
+    .swiper-wraper{
+        padding-top: 0;
+        height: fit-content;
+        max-height: 200px;
     }
 
     .swiper-slide{
         margin: 50px;
+        margin-left: 30px;
+        margin-top: 0;
+        width: 100px;
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     .img-actor{
         width: 100px;
     }
 
     .swiper-slide{
-        margin: 50px;
+        padding: 0;
+        margin-left: 30px;
+        width: 100px;
     }
 }

@@ -9,6 +9,7 @@ h3{
     color: white;
     font-size: 15px;
     font-weight: bold;
+    margin: 0;
 }
 .poster{
     border-radius: 10px;
@@ -19,12 +20,13 @@ h3{
     cursor: pointer;
 }
 
-.titulo-rating-pelicula{
+.rating-pelicula{
     padding: 10px;
+    padding-top: 0;
 }
 
 
-/*@media (max-width: 768px){
+@media (max-width: 768px){
     #estrellas{
         margin-left: 0;
         margin-right: 0;
@@ -37,7 +39,8 @@ h3{
         padding: 0;
         width: fit-content;
     }
-}*/
+}
+
 
 @media (max-width: 600px){
     #estrellas{
@@ -52,6 +55,7 @@ h3{
         width: fit-content;
     }
 }
+
 
 
 

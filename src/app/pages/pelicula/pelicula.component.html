@@ -1,6 +1,6 @@
 <div class="container cuerpo-pelicula">
     <div class="row animate__animated animate__fadeIn animate__faster" *ngIf="pelicula">
-        <div class="col-md d-flex">
+        <div class="col-md col-sm d-flex">
             <img 
             [src]="pelicula.poster_path | poster" 
             [alt]="pelicula.title"
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col text-white">
+                <div class="col text-white overview">
                     {{pelicula.overview}}
                 </div>
             </div>
@@ -62,21 +62,23 @@
 
     <div class="row mt-5" *ngIf="cast.length > 0">
         <div class="col">
-            <h4 class="text-white mb-3">Reparto</h4>
+            <h4 class="text-white">Reparto</h4>
             <app-cast-slideshow [cast]="cast"></app-cast-slideshow>
         </div>
     </div>
 
-    <div class="row mt-5 contenedor-recomendadas p-2" id="recomendadas" *ngIf="recomendadas.length > 0">
+    <div class="row mt-3 contenedor-recomendadas p-2" id="recomendadas" *ngIf="recomendadas.length > 0">
         <h4 class="text-white mb-3">Recomendadas</h4>
-        <div class="col-md-3 mb-5 d-flex animate__animated animate__fadeIn">
+        <div class="d-flex animate__animated animate__fadeIn">
             
-            <div *ngFor="let recomendada of recomendadas" class="pelicula-recomendada">
+            <div *ngFor="let recomendada of recomendadas" class="pelicula-recomendada mb-5">
                 <img 
                 [src]="recomendada.poster_path | poster" 
                 [alt]="recomendada.title"
-                class="poster-recomendada"
+                class="poster-recomendada mb-2"
                 (click)="onClickPelicula( recomendada )">
+                <p>{{recomendada.title}}</p><br>
+                <p style="opacity: 0.5;">{{recomendada.release_date | date: 'yyyy'}}</p>
             </div>
             
         </div>
