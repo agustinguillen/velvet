@@ -49,23 +49,46 @@ iframe{
 #recomendadas{
     width: 90vw;
     max-width: 90vw;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-@media (max-width:992px){
+
+.pelicula-recomendada{
+    width: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+}
+
+@media (max-width:1000px){
     .cuerpo-pelicula{
         margin-left: auto;
         margin-right: auto;
     }
+    .recomendadas-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .pelicula-recomendada{
+        width: 12vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0;
+    }
 }
 
 @media (max-width:768px){
+
+    .recomendadas-wrapper{
+        flex-wrap: wrap;
+    }
+
     .pelicula-recomendada{
-        width: 70vw;
+        width: 15vw;
+        height: max-content;
         margin-left: 0;
-        margin-right: 0;
+        margin-right: 10vw;
         padding-top: 0;
+        align-self: center;
     }
     .poster-pelicula{
         align-self: center;
@@ -90,7 +113,7 @@ iframe{
     }
 
     .poster-pelicula{
-        width: 80vw;
+        width: 80%;
         max-width: 80vw;
         max-height: max-content;
         margin-right: auto;
@@ -104,5 +127,16 @@ iframe{
 
     .overview{
         padding-right: 50px;
+    }
+
+    .recomendadas-wrapper{
+        flex-wrap: wrap;
+        margin-left: 8vw;
+    }
+
+    .pelicula-recomendada{
+        width: 20vw;
+        height: 300px;
+        margin-right: 17vw;
     }
 }

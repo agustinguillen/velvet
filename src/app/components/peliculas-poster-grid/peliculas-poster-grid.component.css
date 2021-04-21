@@ -20,6 +20,7 @@ h3{
     cursor: pointer;
 }
 
+
 .rating-pelicula{
     padding: 10px;
     padding-top: 0;
@@ -27,11 +28,15 @@ h3{
 
 
 @media (max-width: 768px){
+    .rating-pelicula{
+        padding: 0 20px;
+    }
+
     #estrellas{
         margin-left: 0;
         margin-right: 0;
         padding: 0;
-        width: 50vw;
+        width: 30vw;
     }
 
     .rating{
@@ -43,12 +48,18 @@ h3{
 
 
 @media (max-width: 600px){
-    #estrellas{
-        margin-left: 15vw;
-        margin-right: 8vw;
-        padding: 0;
-        width: 50vw;
+
+    .rating-pelicula{
+        padding: 0 0 0 30vw;
     }
+
+    #estrellas{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 30vw;
+    }
+
     .rating{
         margin-right: 5vw;
         padding: 0;

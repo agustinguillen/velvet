@@ -58,7 +58,7 @@ export class PeliculaComponent implements OnInit {
       this.trailerURL = `${this.baseURL_Trailer}${this.key}`;
       
       this.recomendadas = recomendadas;
-      recomendadas.splice(7);
+      recomendadas.splice(5);
     } )
     
 
