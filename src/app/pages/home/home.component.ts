@@ -1,7 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Movie } from 'src/app/interfaces/cartelera-response';
 import { PeliculasService } from './../../services/peliculas.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +13,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   public moviesSlideshow: Movie[] = [];
   
 
-  @HostListener('window:scroll', ['$event']) 
-  onScroll(){
+  /*@HostListener('window:scroll', ['$event']) */
+  /*onScroll(){
     const pos = (document.documentElement.scrollTop || document.body.scrollTop) + 1300;
     const max = (document.documentElement.scrollHeight || document.body.scrollHeight);
 
@@ -28,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.movies.push(...movies)
         } );
     }
-  }
+  }*/
 
   constructor( private peliculasService: PeliculasService) { }
 
@@ -44,6 +43,15 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(){
       this.peliculasService.resetCartelera();
+  }
+
+  cargarMasPeliculas(){
+    if(this.peliculasService.cargando){
+      return
+    }
+    this.peliculasService.getCartelera().subscribe( movies => {
+      this.movies.push(...movies)
+      } );
   }
 
   

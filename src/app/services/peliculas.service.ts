@@ -9,6 +9,8 @@ import { Cast, CreditosResponse } from '../interfaces/creditos-response';
 import { PeliculaResponse } from '../interfaces/pelicula-response';
 import { Resultado, RecomendadasResponse } from '../interfaces/recomendadas-response';
 import { Result, TrailerResponse } from '../interfaces/trailer-response';
+import { Filtradas, PeliculasGeneroResponse } from '../interfaces/peliculas-genero-response';
+
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +36,16 @@ export class PeliculasService {
     return{
       api_key: '20a1327a930e37d6c689f84bb265a470',
       language: 'es-ES'
+    }
+  }
+
+  get params3(){
+    return{
+      api_key: '20a1327a930e37d6c689f84bb265a470',
+      language: 'es-ES',
+      include_adult: 'false',
+      include_video: 'false',
+      with_genres: '18'
     }
   }
 
@@ -73,6 +85,19 @@ export class PeliculasService {
          }).pipe(
            map( resp => resp.results)
          )
+    }
+
+    buscarPeliculasGenero( id:string, page:string ):Observable<Filtradas[]>{
+        return this.http.get<PeliculasGeneroResponse>(`${ this.baseURL }/discover/movie`,{
+          params: {api_key: '20a1327a930e37d6c689f84bb265a470',
+          language: 'es-ES',
+          include_adult: 'false',
+          include_video: 'false',
+          page: page,
+          with_genres: id}
+        }).pipe(
+          map(resp=>resp.results)
+        )
     }
 
     getDetallePelicula( id:string ){
@@ -118,6 +143,8 @@ export class PeliculasService {
             catchError(err => of([]))
             
             )};
+
+      
       
   
 }

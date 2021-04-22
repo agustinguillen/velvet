@@ -1,0 +1,15 @@
+<h1 class="text-center">Género: <small class="text-capitalize"> {{id}} </small></h1> 
+<hr>
+<div class="container mx-xl-5 mx-lg-5 mx-md-5">
+    <div class="row">
+        <div class="col">
+            <app-peliculas-poster-grid [movies]="peliculas_genero"></app-peliculas-poster-grid>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <button (click)="cargarMasPeliculas()"
+            class="btn btn-warning mb-5">
+            Cargar más películas
+    </button>
+</div>

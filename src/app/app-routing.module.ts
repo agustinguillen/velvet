@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent} from './pages/home/home.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { PeliculaComponent } from './pages/pelicula/pelicula.component';
+import { GeneroComponent } from './pages/genero/genero.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'buscar/:texto',
     component: BuscarComponent
+  },
+  {
+    path: 'genero/:id',
+    component: GeneroComponent
   },
   {
     path: '**',

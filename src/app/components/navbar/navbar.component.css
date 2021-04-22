@@ -28,7 +28,16 @@
 }
 
 .menu{
-    max-width: fit-content;
+    max-width: 80%;
+}
+
+ul li a{
+    color: #bd4c5f !important;
+    font-size: 25px;
+}
+
+.navbar-nav li .dropdown-menu{
+    background-color: #040816;
 }
 
 
