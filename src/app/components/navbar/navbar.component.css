@@ -33,7 +33,7 @@
 
 ul li a{
     color: #bd4c5f !important;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .navbar-nav li .dropdown-menu{
@@ -115,6 +115,13 @@ ul li a{
     .search-label{
         width: 10px;
     }
+
+    .dropdown-div{
+        width: fit-content;
+        margin-top: 10px;
+        margin-left: 10px;
+        border: none;
+    }
  }
 
  @media (max-width: 450px){
@@ -124,6 +131,11 @@ ul li a{
 
     .search-label{
         width: 10px;
+    }
+
+    .dropdown-div{
+        width: 40vw;
+        padding-right: 0;
     }
  }
 

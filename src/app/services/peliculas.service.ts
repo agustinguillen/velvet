@@ -39,16 +39,6 @@ export class PeliculasService {
     }
   }
 
-  get params3(){
-    return{
-      api_key: '20a1327a930e37d6c689f84bb265a470',
-      language: 'es-ES',
-      include_adult: 'false',
-      include_video: 'false',
-      with_genres: '18'
-    }
-  }
-
 
 
   resetCartelera(){
@@ -142,9 +132,5 @@ export class PeliculasService {
             map(resp => resp.results),
             catchError(err => of([]))
             
-            )};
-
-      
-      
-  
+      )};
 }
