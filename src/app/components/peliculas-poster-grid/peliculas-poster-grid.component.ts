@@ -11,7 +11,11 @@ export class PeliculasPosterGridComponent implements OnInit {
 
   @Input() movies: Movie[];
 
-  constructor( private router: Router ) { }
+  public loading: boolean = true;
+
+  constructor( private router: Router ) { 
+    this.loading=false;
+  }
 
   ngOnInit(): void {
     console.log(this.movies)

@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public movies: Movie[] = [];
   public moviesSlideshow: Movie[] = [];
+  public loading: boolean = true;
   
 
   /*@HostListener('window:scroll', ['$event']) */
@@ -29,7 +30,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }*/
 
-  constructor( private peliculasService: PeliculasService) { }
+  constructor( private peliculasService: PeliculasService) { 
+    this.loading=false;
+  }
 
   ngOnInit(): void {
 
